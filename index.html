@@ -19,7 +19,7 @@ body{font-family:Manrope,sans-serif;background:var(--black);color:#fff}
 h1,h2,h3,h4{font-family:Cinzel,serif}
 a{text-decoration:none;color:inherit}
 
-/* Intro animation */
+/* Intro */
 .intro{position:fixed;inset:0;background:#000;display:flex;align-items:center;justify-content:center;flex-direction:column;z-index:9999}
 .intro h1{color:var(--gold);font-size:58px;animation:zoom 2.5s forwards}
 .intro p{opacity:0;margin-top:12px;letter-spacing:4px;color:#aaa;animation:fade 1.5s forwards 1.5s}
@@ -59,11 +59,19 @@ section{padding:90px 6%;background:var(--black)}
 .card p{font-size:14px;color:#ccc;line-height:1.6}
 
 /* Video */
-.video iframe{width:100%;height:450px;border-radius:18px;border:2px solid var(--gold);background:#000}
+.video iframe{width:100%;height:450px;border-radius:18px;border:2px solid var(--gold);background:#000;display:block;}
 
-/* Instagram */
+/* Instagram embeds scroll-free */
 .insta{display:grid;grid-template-columns:repeat(auto-fit,minmax(250px,1fr));gap:20px}
-.insta iframe{width:100%;height:420px;border-radius:16px;border:1px solid rgba(201,162,77,.3);background:#000}
+.insta iframe{
+  width:100%;
+  height:500px;
+  border:none;
+  border-radius:16px;
+  overflow:hidden;
+  background:#000;
+  display:block;
+}
 
 /* Owner */
 .owner-box{
@@ -105,12 +113,11 @@ footer p,a{color:#aaa;font-size:14px;line-height:1.8}
 @media(max-width:768px){
 .hero h1{font-size:36px}
 .video iframe{height:220px}
-.insta iframe{height:260px}
+.insta iframe{height:400px;}
 .owner-box{text-align:center;justify-content:center}
 }
 </style>
 </head>
-
 <body>
 
 <!-- Intro -->
@@ -166,6 +173,10 @@ setTimeout(()=>document.getElementById("intro").remove(),800);
 <div class="card"><h4>Cinematic Wedding Films</h4><p>Movie Style Wedding Films</p></div>
 <div class="card"><h4>Pre-Wedding Shoots</h4><p>Romantic & Destination Shoots</p></div>
 <div class="card"><h4>Events Coverage</h4><p>Professional Event Photography</p></div>
+<div class="card"><h4>Couple Portraits</h4><p>Elegant Couple Photography</p></div>
+<div class="card"><h4>Drone Coverage</h4><p>Aerial Shots & Cinematics</p></div>
+<div class="card"><h4>Birthday Parties</h4><p>Fun & Memorable Captures</p></div>
+<div class="card"><h4>Corporate Events</h4><p>Professional Coverage</p></div>
 </div>
 </section>
 
@@ -175,14 +186,14 @@ setTimeout(()=>document.getElementById("intro").remove(),800);
 <iframe src="https://www.youtube.com/embed/YOgv5Vvo7RY" allowfullscreen></iframe>
 </section>
 
-<!-- Instagram Section -->
+<!-- Instagram Section (original posts, scroll-free) -->
 <section>
 <div class="section-title"><h2>Our Work</h2></div>
 <div class="insta">
-<iframe src="https://www.instagram.com/p/DMHzbe9vBQg/embed" allowtransparency="true" frameborder="0" style="background:#000"></iframe>
-<iframe src="https://www.instagram.com/p/DCZz1mJvlgA/embed" allowtransparency="true" frameborder="0" style="background:#000"></iframe>
-<iframe src="https://www.instagram.com/p/DB_JFkZvO3p/embed" allowtransparency="true" frameborder="0" style="background:#000"></iframe>
-<iframe src="https://www.instagram.com/p/DSRjvGGD7jf/embed" allowtransparency="true" frameborder="0" style="background:#000"></iframe>
+<iframe src="https://www.instagram.com/p/DMHzbe9vBQg/embed" scrolling="no" allowtransparency="true" allowfullscreen></iframe>
+<iframe src="https://www.instagram.com/p/DCZz1mJvlgA/embed" scrolling="no" allowtransparency="true" allowfullscreen></iframe>
+<iframe src="https://www.instagram.com/p/DB_JFkZvO3p/embed" scrolling="no" allowtransparency="true" allowfullscreen></iframe>
+<iframe src="https://www.instagram.com/p/DSRjvGGD7jf/embed" scrolling="no" allowtransparency="true" allowfullscreen></iframe>
 </div>
 </section>
 
